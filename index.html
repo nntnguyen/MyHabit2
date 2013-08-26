@@ -18,158 +18,61 @@ alert('Hello 2!');
 </head>
 <body>
 
-<div data-role="page" id="FS-Home">
-    <div data-role="header" data-theme="b" data-position="fixed">
-				<h1>Fashion</h1>   
-                <a href="#" data-role="button" data-theme="b"  data-icon="bars" data-iconpos="notext"></a>
-                <a href="#" data-role="button" data-theme="b"  data-icon="refresh" data-iconpos="notext"></a>			
-    </div>
-<div class="subheader">			
-				<div data-role="navbar" data-theme="e">
-					<ul>
-						<li><a href="#Home">Male</a></li>
-						<li><a href="#Home2">Female</a></li>
-                    </ul>
-    </div>
-    </div>
-<div data-role="content">
-<div data-role="controlgroup" data-type="horizontal">
-<h3>Hot</h3>
-    <dl data-role="list-of-cards" data-divider-theme="b" id="block1" data-inset="true">
-	
-                	<dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/atypical-6052-99019-2-zoom.jpg"/>
-	                			</div>
-								<h3>Áo thun cổ tròn nam túi sọc</h3>
-	                            <p><a href="#">View more</a>.</p>
-                    		</li>                    	                  		
-                    	</ul>
-                    </dt>
-					<!-- card #2 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-0829-46558-1-zoom.jpg"/>
-									<h3>Quần short phối lai</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>   
-        <!-- card #3 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-        <!-- card #4 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-        <!-- card #5 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-					</dl>
+<div data-role="page" id="page">
+<div data-role="header" data-theme="b" data-position="fixed"> 
+    <h1>Options</h1>   
+                <a href="#" data-role="button" data-theme="b"  data-icon="arrow-l" data-iconpos="notext"></a>                 
 </div>
-<div data-role="controlgroup" data-type="horizontal">
-<h3>News</h3>
-    <dl data-role="list-of-cards" data-divider-theme="b" id="block2" data-inset="true">
-	<dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/atypical-6052-99019-2-zoom.jpg"/>
-	                			</div>
-								<h3>Áo thun cổ tròn nam túi sọc</h3>
-	                            <p><a href="#">View more</a>.</p>
-                    		</li>                    	                  		
-                    	</ul>
-                    </dt>
-					<!-- card #2 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-0829-46558-1-zoom.jpg"/>
-									<h3>Quần short phối lai</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>   
-        <!-- card #3 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-        <!-- card #4 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-        <!-- card #5 -->
-                    <dt>
-                    	<ul data-role="listview" data-inset="true" class="loc-card">
-                    		<li class="loc-image" data-inline="true">
-	                			<div>
-	                				<img src="http://static04-vn.zalora.com/p/prospero-6247-12629-1-zoom.jpg"/>
-									<h3>Quần Jean Slimfit bạc gối đùi</h3>
-									<p><a href="#">View more</a>.</p>
-	                			</div>
-                    		</li>                    		                 		
-                    	</ul>
-                    </dt>
-					</dl>
-					</div></div>
+<div data-role="content"> 
+   <form>
+     <label for="search-1">Search:</label>
+     <input name="search-1" id="search-1" value="" type="search">
+</form>
+       <p>Catagory</p>
+    <ul data-role="listview" data-split-icon="gear" data-split-theme="d" data-inset="true" >
+<li><a href="#page3">
+<img src="http://static02-vn.zalora.com/p/prospero-9225-31119-1-zoom.jpg" />
+<h3>Shirt</h3>
+<p>Item A Description</p>
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Go to page 3
+</a></li>
+<li><a href="#page3">
 
-<div data-role="footer" data-position="fixed">
-				
-	           
-                    <h1>Copyright</h1>  
-    </div>
-    </div>
+<img src="http://static03-vn.zalora.com/p/something-borrowed-8709-09619-1-zoom.jpg" />
+<h3>T-shirt</h3>
+<p>Item B Description</p>
 
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Purchase album
+</a></li>
+<li><a href="index.html">
+<img src="http://static03-vn.zalora.com/p/inner-circle-6449-51519-1-zoom.jpg" />
+<h3>Skirt</h3>
+<p>Item C description</p>
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Purchase album
+</a></li>
+<li><a href="#page3">
+<img src="http://static02-vn.zalora.com/p/dahlia-8263-32577-1-zoom.jpg" />
+<h3>Dress</h3>
+<p>Item E Description</p>
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Purchase album
+</a></li>
+<li><a href="#page3">
+<img src="http://static04-vn.zalora.com/p/atypical-6092-20409-1-zoom.jpg" />
+<h3>Jeans</h3>
+<p>Item F Description</p>
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Purchase album
+</a></li>
+<li><a href="#page3">
+<img src="http://static02-vn.zalora.com/p/atypical-4520-68448-1-zoom.jpg" />
+<h3>Pants</h3>
+<p>Item G Description</p>
+</a><a href="#page3" data-rel="dialog" data-transition="slideup">Purchase album
+</a></li>
+
+    <a data-role="button" data-theme="b" href="#page2">Exit</a>    
+    </div>
+</div>
+</div>
 
 </body>
 </html>
