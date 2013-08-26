@@ -19,6 +19,23 @@
 	{
 		alert('Resume');
 	}
+	function onBackButton()
+	{
+		alert($("div.ui-page-active").get(0).id);
+		if($("div.ui-page-active").get(0).id=='page1')
+		{
+			alert('...');
+		}
+		else if($("div.ui-page-active").get(0).id=='page2')
+		{
+			$.mobile.changePage("#page1",{transition:"slideup"});
+		}
+		else if($("div.ui-page-active").get(0).id=='page3')
+		{
+			$.mobile.changePage("#page1",{transition:"slidedown"});
+		}
+		
+	}
 	function init() {		
         document.addEventListener("deviceready", onDeviceReady, true);       
     }    
@@ -32,9 +49,9 @@
 		<div data-role="content"> 
 		Page 1
 		</div>
-		<div data-role="footer"> 
+		<div data-role="footer"  data-position="fixed"> 
 		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2/a>
+		<a href="#page2" data-role="button" >page 2</a>
 		<a href="#page3" data-role="button" >page 3</a>
 		</div>
 	</div>
@@ -45,9 +62,9 @@
 		<div data-role="content"> 
 		Page 2
 		</div>
-		<div data-role="footer"> 
+		<div data-role="footer"  data-position="fixed"> 
 		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2/a>
+		<a href="#page2" data-role="button" >page 2</a>
 		<a href="#page3" data-role="button" >page 3</a>
 		</div>
 	</div>
@@ -58,9 +75,9 @@
 		<div data-role="content"> 
 		Page 3
 		</div>
-		<div data-role="footer"> 
+		<div data-role="footer"  data-position="fixed"> 
 		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2/a>
+		<a href="#page2" data-role="button" >page 2</a>
 		<a href="#page3" data-role="button" >page 3</a>
 		</div>
 	</div>
