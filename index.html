@@ -7,15 +7,15 @@
 	{
 		var result = navigator.network.connection.type;
 		
-		if(result === 'Connection.WIFI')
+		if(result == 'Connection.WIFI')
 		{
 			alert('wifi');
 		}
-		else if(result === 'Connection.CELL_3G')
+		else if(result == 'Connection.CELL_3G')
 		{
 			alert('3g');
 		}
-		else if(result === 'Connection.NONE')
+		else if(result == 'Connection.NONE')
 		{
 			alert('none');
 		}
