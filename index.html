@@ -5,6 +5,7 @@
 <script>
 	var onDeviceReady=function()
 	{
+		alert('result');
 		var result = navigator.network.connection.type;
 		alert(result);
 		if(result == 'Connection.WIFI')
@@ -22,7 +23,9 @@
 	}
 	
 	function init() {
+		alert('init');
         document.addEventListener("deviceready", onDeviceReady, true);
+        alert('init2');
     }
     
 </script>
