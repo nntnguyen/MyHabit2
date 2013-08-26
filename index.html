@@ -10,7 +10,7 @@
 	{
 	document.addEventListener("pause", onPause, false);     
 	document.addEventListener("resume", onResume, false);     
-	document.addEventListener("backbutton", onBackButton, false);
+	
 	}	
 	function onPause()
 	{
@@ -38,7 +38,8 @@
 		
 	}
 	function init() {		
-        document.addEventListener("deviceready", onDeviceReady, true);       
+        document.addEventListener("deviceready", onDeviceReady, true);   
+        document.addEventListener("backbutton", onBackButton, false);	
     }    
 </script>
 </head>
