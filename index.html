@@ -1,11 +1,10 @@
 <html>
 <head>
-<script src="phonegap.js"></script>
-<script type="text/javascript" charset="utf-8">
-
+<script src="phonegap.js">
 function CheckConnection()
 {
 	var result=navigator.network.connection.type;
+	
 	if(result=='Connection.WIFI')
 	{
 		alert('wifi...');
@@ -13,6 +12,10 @@ function CheckConnection()
 	else if(result=='Connection.None')
 	{
 		alert('Not Connected...');
+	}
+	else if(result=='Connection.CELL_3G')
+	{
+		alert('3G...');
 	}
 }
 
@@ -32,5 +35,4 @@ function init()
 <body onLoad="init()" >
 test
 </body>
-
 </html>
