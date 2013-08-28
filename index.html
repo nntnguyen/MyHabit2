@@ -10,22 +10,25 @@
 <script>
 	var onDeviceReady=function()
 	{
-	alert('z');
-	var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
-	alert(curentPossition);
-		
-	function onGeoSuccess(position)
-	{
-		alert('z1');
-		clat=position.coords.latitude;
-		clng=position.coords.longitude;
-		alert (clat + ", " + clng );
-		$.initMap();
-	}
-	$.initMap=function()
-	{
-		$('#map_canvas').gmap('get','map').setOptions({'center':new google.maps.LatLng(clat,clng)});
-	}
+		alert('z');
+		var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
+		alert(curentPossition);
+			
+		function onGeoSuccess(position)
+		{
+			alert('z1');
+			clat=position.coords.latitude;
+			clng=position.coords.longitude;
+			alert (clat + ", " + clng );
+			$.initMap();
+		}
+		$.initMap=function()
+		{
+			//$('#map_canvas').gmap('get','map').setOptions({'center':new google.maps.LatLng(clat,clng)});
+			
+			var latLng=new google.maps.LatLng(clat, clng);
+			$('#map_canvas').gmap({'center':latLng, 'zoom':15, 'minZoom':10,'disableDefaultUI':true});
+		}
 	}
 </script>
 </head>
