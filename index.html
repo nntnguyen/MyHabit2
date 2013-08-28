@@ -1,43 +1,37 @@
-<!doctype html>
 <html>
-<head>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-<script src="phonegap.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-<script src="jquery.ui.map.overlays.min" ></script>
-<script src="jquery.ui.map.full.min" ></script>
-<script>
-	var onDeviceReady=function()
-	{
-		alert('z');
-		var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
-		alert(curentPossition);
-			
-		function onGeoSuccess(position)
-		{
-			alert('z1');
-			clat=position.coords.latitude;
-			clng=position.coords.longitude;
-			alert (clat + ", " + clng );
-			$.initMap();
-		}
-		$.initMap=function()
-		{
-			//$('#map_canvas').gmap('get','map').setOptions({'center':new google.maps.LatLng(clat,clng)});
-			
-			var latLng=new google.maps.LatLng(clat, clng);
-			$('#map_canvas').gmap({'center':latLng, 'zoom':15, 'minZoom':10,'disableDefaultUI':true});
-		}
-	}
-</script>
-</head>
-<body >
-<div data-role="page">
-		<div data-role="content">
-			<div id="map_canvas" style="width:100%;height:600px"></div>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script src="https://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+		<script src="jquery.ui.map.full.min.js"></script>
+		<script src="jquery.ui.map.overlays.min.js"></script>
+		<script src="phonegap.js"></script>
+		<script type="text/javascript" charset="utf-8">
+ 
+			var onDeviceReady = function() 
+
+			{
+				var currentPosition = navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+				function onGeoSuccess(postion){
+					clat=position.coords.latitude;
+					clng=position.coords.longtitude;
+					$.initMap();
+				}
+				$.initMap=function(){
+					//$('#map_canvas').gmap('get', 'map').setOptions({'center':new google.maps.latLng(clat,clng)});
+					var latlng=new google.maps.LatLng(clat,clng);
+					$('#map_canvas').gmap({'center':latLng,'zoom':15,'minzoom':10,'disableDefaultUI':true});
+				}
+			};
+ 
+			function init() 
+				{document.addEventListener("deviceready", onDeviceReady, true); };
+		</script> 
+	</head> 
+	<BODY id="mainbody" onload="init();" >
+		<div data-role="page">
+			<div data-role="content" style="width:100%; heigh:600px;"></div>
 		</div>
-</div>
-</body>
+	</body>
 </html>
