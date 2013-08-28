@@ -18,8 +18,12 @@
 			};
 			function getcurrentPosition()
 			{
-				var currentPosition = navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+				var currentPosition = navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError,{ maximumAge:300000 , timeout:50000 , enableHighAccuracy:true });
 					alert(currentPosition);
+			}
+			function onGeoError()
+			{
+				alert('eror');
 			}
 			function onGeoSuccess(postion){		
 					alert('D');			
