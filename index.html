@@ -19,13 +19,14 @@
 			function getcurrentPosition()
 			{			
 			alert('c');
-				var currentPosition = navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError,{maximumAge:300000, timeout:50000, enableHighAccuracy:true});
+				var currentPosition = navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError,{ maximumAge:300000 , timeout:50000 , enableHighAccuracy:true });
 			}
-			function onGeoSuccess(postion){			
+			function onGeoSuccess(postion){		
+					alert('D');			
 					clat=position.coords.latitude;
 					clng=position.coords.longtitude;
 					//$.initMap();
-					alert('D');
+					alert('DD');
 				}
 			function init() 
 			{
@@ -43,7 +44,9 @@
 	</head> 
 	<BODY id="mainbody" onload="init();" >
 		<div data-role="page">
-			<div data-role="content" style="width:100%; heigh:600px;">aa</div>
+			<div data-role="content">
+				<div id="map_canvas" style="width:100%; heigh:600px;">aa</div>
+			</div>
 		</div>
 	</body>
 </html>
