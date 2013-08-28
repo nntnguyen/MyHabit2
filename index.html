@@ -5,93 +5,35 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 <script src="phonegap.js"></script>
+<script src="jquery.ui.map.overlays.min" />
+<script src="jquery.ui.map.full.min">/
 <script>
 	var onDeviceReady=function()
 	{
-	document.addEventListener("pause", onPause, false);     
-	document.addEventListener("resume", onResume, false);  
 	alert('z');
 	var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
 	alert(curentPossition);
+		
 	function onGeoSuccess(position)
 	{
-		alert('z');
+		alert('z1');
 		clat=position.coords.latitude;
 		clng=position.coords.longitude;
 		alert (clat + ", " + clng );
+		$.initMap();
 	}
-	}	
-	function onPause()
+	$.initMap=function()
 	{
-		alert('Pause');
+		$('#map_canvas').gmap('get','map').setOptions({'center':new google.maps.LatLng(clat,clng)});
 	}
-	function onResume()
-	{
-		alert('Resume');
 	}
-	function onBackButton()
-	{
-		alert($("div.ui-page-active").get(0).id);
-		if($("div.ui-page-active").get(0).id=='page1')
-		{
-			alert('...');
-		}
-		else if($("div.ui-page-active").get(0).id=='page2')
-		{
-			$.mobile.changePage("#page1",{transition:"slideup"});
-		}
-		else if($("div.ui-page-active").get(0).id=='page3')
-		{
-			$.mobile.changePage("#page1",{transition:"slidedown"});
-		}
-		
-	}
-	function init() {		
-        document.addEventListener("deviceready", onDeviceReady, true);   
-		document.addEventListener("backbutton", onBackButton, false);			
-    }	  
-	
 </script>
 </head>
-<body onLoad="init()">
-	<div data-role="page" id="page1">
-		<div data-role="header" data-theme="b" data-position="fixed"> 
-			<h1>Options</h1>   
-        </div>	
-		<div data-role="content"> 
-		Page 1
+<body >
+<div data-role="page">
+		<div data-role="content">
+			<div id="map_canvas" style="width:100%;height:600px"></div>
 		</div>
-		<div data-role="footer"  data-position="fixed"> 
-		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2</a>
-		<a href="#page3" data-role="button" >page 3</a>
-		</div>
-	</div>
-	<div data-role="page" id="page2">
-		<div data-role="header" data-theme="b" data-position="fixed"> 
-			<h1>Options</h1>   
-        </div>	
-		<div data-role="content"> 
-		Page 2
-		</div>
-		<div data-role="footer"  data-position="fixed"> 
-		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2</a>
-		<a href="#page3" data-role="button" >page 3</a>
-		</div>
-	</div>
-	<div data-role="page" id="page3">
-		<div data-role="header" data-theme="b" data-position="fixed"> 
-			<h1>Options</h1>   
-        </div>	
-		<div data-role="content"> 
-		Page 3
-		</div>
-		<div data-role="footer"  data-position="fixed"> 
-		<a href="#page1" data-role="button" >page 1</a>
-		<a href="#page2" data-role="button" >page 2</a>
-		<a href="#page3" data-role="button" >page 3</a>
-		</div>
-	</div>
+</div>
 </body>
 </html>
