@@ -10,7 +10,16 @@
 	{
 	document.addEventListener("pause", onPause, false);     
 	document.addEventListener("resume", onResume, false);  
-	ShowMyPosition();
+	alert('z');
+	var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
+	alert(curentPossition);
+	function onGeoSuccess(position)
+	{
+		alert('z');
+		clat=position.coords.latitude;
+		clng=position.coords.longitude;
+		alert (clat + ", " + clng );
+	}
 	}	
 	function onPause()
 	{
@@ -40,17 +49,8 @@
 	function init() {		
         document.addEventListener("deviceready", onDeviceReady, true);   
 		document.addEventListener("backbutton", onBackButton, false);			
-    }
-	function ShowMyPosition()
-	{
-		var curentPossition = navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
-	}    
-	function onGeoSuccess(position)
-	{
-		clat=position.coords.latitude;
-		clng=position.coords.longitude;
-		alert (clat + ", " + clng );
-	}
+    }	  
+	
 </script>
 </head>
 <body onLoad="init()">
